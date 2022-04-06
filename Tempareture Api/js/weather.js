@@ -1,4 +1,3 @@
-console.log('I am chatting with Chhoa');
 
 // API call from server
 // Weather key
@@ -7,12 +6,12 @@ const myKey = `06d385a704bbbeecf21504c8e2da5b7f`;
 function temperatureSearch(){
     const city = document.getElementById('cityNameInput').value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myKey}&units=metric`;
-
+    
     fetch (url)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+    })
 }
 //inner text call function
 const setInnerText = (id, text) => {
@@ -24,7 +23,7 @@ const displayTemperature = temperature => {
     setInnerText('city', temperature.name);
     setInnerText('temperature', temperature.main.temp);
     setInnerText('weatherCondition', temperature.weather[0].main);
-
+    
     // set weather icon
     const url = ``;
     const imageIcon = document.getElementById('weatherIcon');
@@ -32,6 +31,7 @@ const displayTemperature = temperature => {
 }
 
 
+// console.log('I am chatting with Chhoa');
 // Cemi-Failed Part of code
 // getInput();
 
@@ -56,3 +56,4 @@ const displayTemperature = temperature => {
 //     console.log(inputValue);
 //     }
 // )
+
